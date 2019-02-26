@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Navbar from './components/Navbar';
+import Topnavbar from './components/Topnavbar';
 
-class App extends Component {
+class Body extends Component {
   render() {
     return (
-      <nav><Navbar></Navbar></nav>
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
@@ -24,6 +23,17 @@ class App extends Component {
         </header>
       </div>
     );
+  }
+}
+
+class App extends Component{
+  render(){
+    return(
+      <div>
+        <Topnavbar />
+        <Body />
+      </div>
+    )
   }
 }
 
